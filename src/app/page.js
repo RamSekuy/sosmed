@@ -2,6 +2,8 @@ import MainNavbar from "./_components/navComponents/mainNavbar";
 
 export default function Home() {
   return (<>
+    {/* mobile navbar diatas */}
+    {/* isi nya di ubah sesuai page masing masing  */}
     <nav className="w-full sticky top-0 md:hidden">
       <div className="w-full flex justify-between py-2 px-4">
       <div>
@@ -15,8 +17,13 @@ export default function Home() {
 
       </div>
     </nav>
+
+    {/* Responsive Navbar */}
     <MainNavbar/>
-    <main className="min-h-screen w-full bg-black">
+
+    {/* Isi page */}
+    {/* isi nya di ubah sesuai page masing masing*/}
+    <main className="min-h-screen w-full">
 
     </main>
     </>);
