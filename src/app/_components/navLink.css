@@ -1,0 +1,16 @@
+.navLink{
+    svg{
+        transition: transform ease 0.15s;
+    }
+    img{
+        transition: transform ease 0.15s;
+    }
+}
+.navLink:hover{
+    svg{
+        transform: scale(1.1);
+    }
+    img{
+        transform: scale(1.1);
+    }
+}
