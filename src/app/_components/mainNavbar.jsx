@@ -1,9 +1,9 @@
-import { useSelector } from "react-redux"
+// import { useSelector } from "react-redux"
 
 function MainNavbar(){
-    const account = useSelector((state)=>state.account)
+    // const account = useSelector((state)=>state.account)
     return(<>
-    <nav className="sticky bottom-0 flex justify-evenly md:flex-col">
+    <nav className="fixed bottom-0 w-full md:w-max md:h-100vh flex justify-evenly md:flex-col bg-white md:static">
         <div className="w-[48px]">
             <button className="w-full aspect-square rounded-full flex justify-center items-center">
             <svg aria-label="Beranda" class="x1lliihq x1n2onr6 x5n08af" fill="currentColor" height="24" role="img" viewBox="0 0 24 24" width="24"><title>Beranda</title><path d="M9.005 16.545a2.997 2.997 0 0 1 2.997-2.997A2.997 2.997 0 0 1 15 16.545V22h7V11.543L12 2 2 11.543V22h7.005Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
