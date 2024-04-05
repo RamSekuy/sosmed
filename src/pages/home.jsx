@@ -1,0 +1,48 @@
+import MainNavbar from "../components/mainNavbar"
+function HomePage(){
+    return(<>
+    <MainNavbar></MainNavbar>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+    <div>Lorem</div>
+</>
+)}
+export default HomePage
