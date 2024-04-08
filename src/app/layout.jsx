@@ -1,6 +1,10 @@
+// "use client"
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
+// import { Provider } from 'react-redux'
+// import { store } from "./_redux/store";
+import App from "./_components/app";
 
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
@@ -12,9 +16,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="flex flex-col md:flex-row">
+        {/* <Provider store={store}> */}
+        <App>
         <ChakraProvider>
         {children}
         </ChakraProvider>
+        {/* </Provider> */}
+        </App>
         </body>
     </html>
   );

@@ -16,7 +16,7 @@ export default function NavLink({id,url, children }){return(<>
 
 // contoh ketika pemanggilan component
 /* 
-<NavLink id url>
+<NavLink id="text" url="/redirect-url">
 <svg />
 </NavLink>
 */
