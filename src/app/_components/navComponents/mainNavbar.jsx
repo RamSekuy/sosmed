@@ -3,7 +3,7 @@ import NavLink from './navLink'
 
 function MainNavbar(){
     return(<>
-    <nav className="md:h-screen sticky top-0">
+    <nav className="md:h-screen sticky top-0 z-10">
         <div className="fixed bottom-0 w-full md:w-max md:h-screen flex md:flex-col bg-white md:static">
             <div className="xl:w-[244px] min-[1920px]:w-[333px] flex md:flex-col md:justify-between h-full md:px-3 md:py-2 border-solid border-slate-300 md:border-r-2">
                 <div className="w-full flex flex-row justify-evenly md:flex-col">
