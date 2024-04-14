@@ -14,3 +14,12 @@
         transform: scale(1.1);
     }
 }
+.navLink.activePage{
+    svg{
+        transform: scale(1.1);
+    }
+    img{
+        transform: scale(1.1);
+    }
+    font-weight: bold;
+}
