@@ -1,12 +1,6 @@
-"use client"
-import MainNavbar from "./_components/navComponents/mainNavbar";
 import Article from "./_components/homeComponents/article";
 import Image from 'next/image'
-import { useDispatch, useSelector } from 'react-redux';
-import { account } from "./_redux/slices/accountSlice";
-import { useState } from "react";
 import RoundedProfile from "./_components/homeComponents/roundedProfile";
-import { page } from "./_redux/slices/pageSlice";
 
 const recomendedPeople = new Array(5);
 
@@ -21,7 +15,6 @@ export default function Home() {
       captionText:["text line 1","Text line ke 2 yang panjang bangeeeeeeeeeet bisa sampai tembus ke line ke 3"]
       }
   }
-  const [recomendedList, setRecomendedList] = useState(recomendedPeople);
 
   const anggepAjaFetch = {
     username:"user name",
@@ -29,11 +22,6 @@ export default function Home() {
     profileImgUrl:"https://th.bing.com/th/id/OIP.QIW1lKgrtrspQv8luNDugQHaEK?rs=1&pid=ImgDetMain",
     activePage:"Beranda"
   }
-  const dispatch = useDispatch()
-  dispatch(account(anggepAjaFetch))
-  dispatch(page({activePage:"Beranda"}))
-
-  const accountData = useSelector((state)=>state.account)
 
   return (<>
   {/* mobile navbar diatas */}
@@ -50,8 +38,6 @@ export default function Home() {
     </div>
   </div>
 
-  {/* Responsive Navbar */}
-  <MainNavbar/>
 
   {/* Isi page */}
   {/* isi nya di ubah sesuai page masing masing*/}
@@ -75,17 +61,18 @@ export default function Home() {
                 <StoryList/>
             </div>
 
-          {recomendedList.map((e,i)=><Article key={"article"+i} keyChild={"article"+i} data={e}/>)}
+          {recomendedPeople.map((e,i)=><Article key={i} keyChild={String(i)} data={e}/>)}
           
           </section>
           </div>
         </section>
+        
         {/* Section MD  */}
         <section className="hidden lg:block xl:pl-[64px] pl-8">
           <div className="max-w-[319px] min-w-[319px] max-h[287px] mt-9">
 
             {/* div profile */}
-            <ProfileContainerFollow data={accountData} text={"alihkan"}/>
+            <ProfileContainerFollow data={anggepAjaFetch} text={"alihkan"}/>
 
             {/* div recomended */}
             <div className="w-full py-4">
@@ -95,8 +82,8 @@ export default function Home() {
               </div>
 
             <div className="w-full flex flex-col gap-4 py-3">
-            {recomendedList.map((e,i)=>
-              <ProfileContainerFollow key={"profileContainerFollow"+i} data={e} text="ikuti"></ProfileContainerFollow>
+            {recomendedPeople.map((e,i)=>
+              <ProfileContainerFollow key={i} data={e} text="ikuti"></ProfileContainerFollow>
             )}
             </div>
             
@@ -116,7 +103,7 @@ export default function Home() {
                 <a href="">Verifikasi Meta</a>
               </p>
               <br />
-              <h6>© 2024 INSTAGRAM FROM META {JSON.stringify(page)}</h6>
+              <h6>© 2024 INSTAGRAM FROM META</h6>
             </footer>            
 
           </div>
@@ -129,12 +116,17 @@ export default function Home() {
 }
 
 function StoryList(){
-  const [arr,setArr] =useState([1,1,1])
-  const accountData = useSelector((state)=>state.account);
+  const arr = [
+    {
+      username:"user name",
+      realName:"real name",
+      profileImgUrl:"https://th.bing.com/th/id/OIP.QIW1lKgrtrspQv8luNDugQHaEK?rs=1&pid=ImgDetMain",
+    }
+  ];
   return (
     arr.map((e,i)=>
-      <button key={"story"+i} className="flex justify-center items-center flex-col w-[64px] h-[84px]">
-        <RoundedProfile url={accountData.profileImgUrl}/>
+      <button key={i} className="flex justify-center items-center flex-col w-[64px] h-[84px]">
+        <RoundedProfile url={e.profileImgUrl}/>
         <h6 className="text-nowrap text-xs text-ellipsis">Cerita Anda</h6>
       </button>
     )
